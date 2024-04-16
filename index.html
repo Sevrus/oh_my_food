@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur Oh My Food - Commandez vos plats préférés en un clic !</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="loader"></div>
+<div class="main-container">
+    <header class="header">
+        <img src="./assets/logos/ohmyfood.png" alt="Le logo d'ohmyfood" class="header__logo">
+    </header>
+    <main>
+        <section class="location">
+            <label for="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="sr-only">Entrez votre emplacement</span>
+            </label>
+            <input type="text" name="location" id="location" placeholder="Paris, Belleville"
+                   aria-label="Entrez votre emplacement" class="location__input">
+        </section>
+        <section class="hero">
+            <h1 class="hero__title">Réservez le menu qui vous convient</h1>
+            <p class="hero__content">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="hero__button">Explorer nos restaurants</button>
+        </section>
+        <section class="usage-instruction">
+            <h2 class="usage-instruction__title">Fonctionnement</h2>
+            <ol class="usage-instruction__steps">
+                <li class="step">
+                    <div class="step__number">
+                        <span>1</span>
+                    </div>
+                    <i class="fa-solid fa-mobile-screen-button step__icon"></i>
+                    <h3 class="step__heading">Choisissez un restaurant</h3>
+                </li>
+                <li class="step">
+                    <div class="step__number">
+                        <span>2</span>
+                    </div>
+                    <i class="fa-solid fa-list-ul step__icon"></i>
+                    <h3 class="step__heading">Composez votre menu</h3>
+                </li>
+                <li class="step">
+                    <div class="step__number">
+                        <span>3</span>
+                    </div>
+                    <i class="fa-solid fa-store step__icon"></i>
+                    <h3 class="step__heading">Dégustez au restaurant</h3>
+                </li>
+            </ol>
+        </section>
+        <section class="restaurant-list">
+            <h2 class="restaurant-list__title">Restaurants</h2>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="./assets/logos/ohmyfood@2x.svg" alt="Le logo d'ohmyfood" class="footer__logo">
+        <ul class="footer__links">
+            <li class="footer__links__link">
+                <i class="fa-solid fa-utensils"></i>
+                <span class="footer__link-text">Proposer un restaurant</span>
+            </li>
+            <li class="footer__links__link">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span class="footer__link-text">Devenir partenaire</span>
+            </li>
+            <li class="footer__links__link">
+                <span class="footer__link-text">Mentions légales</span>
+            </li>
+            <li class="footer__links__link">
+                <span class="footer__link-text"><a href="mailto:contact@contact.fr">Contact</a></span>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

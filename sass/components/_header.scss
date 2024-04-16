@@ -1,0 +1,14 @@
+@import '../utilities/mixins';
+@import '../utilities/extends';
+
+.header {
+  position: relative;
+  z-index: 40;
+  height: 63px;
+  @include shadow(0, 2px, 4px, 0, rgba(0, 0, 0, .15));
+  @extend %flex-center;
+
+  &__logo {
+    width: 162px;
+  }
+}

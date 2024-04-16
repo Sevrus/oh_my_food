@@ -1,0 +1,150 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+@import '../utilities/extends';
+@import '../base/general';
+@import '../components/header';
+@import '../components/footer';
+
+
+//LOADER
+.loader {
+  display:none;
+}
+
+//MAIN CONTAINER
+.main-container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+//SECTION LOCATION
+.location {
+  position: relative;
+  z-index: 20;
+  @extend %flex-center;
+  gap: 17px;
+  height: 50px;
+  background-color: #eaeaea;
+  @include shadow(0, 4px, 4px, 0, rgba(0, 0, 0, .25));
+
+  &__input {
+    border: none;
+    background: none;
+    width: 109px;
+
+
+    &::placeholder {
+      color: #000;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+//SECTION HERO
+.hero {
+  @extend %flex-center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 39px 0 57px;
+  text-align: center;
+
+  &__title {
+    padding: 0 50px;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    padding: 15px 20px 27px;
+  }
+
+  &__button {
+    @extend %button-gradient;
+  }
+}
+
+//SECTION INSTRUCTION
+.usage-instruction {
+  padding: 50px 20px 68px 0;
+
+  &__title {
+    padding-left: 20px;
+  }
+
+  &__steps {
+    padding-left: 32px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    height: 72px;
+    padding-left: 34px;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    @include shadow(0, 4px, 15px, 0, rgba(0, 0, 0, .15));
+
+    &__number {
+      @extend %flex-center;
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $primary-color;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    &__icon {
+      color: #7e7e7e;
+    }
+
+    .fa-store {
+      color: $primary-color;
+    }
+
+    .fa-mobile-screen-button {
+      font-size: 19px;
+    }
+
+    &__heading {
+      font-weight: 500;
+    }
+  }
+}

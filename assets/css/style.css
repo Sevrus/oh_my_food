@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.usage-instruction .step__number, .hero, .location, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.usage-instruction .step__number, .hero, .location, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+.header {
+  position: relative;
+  z-index: 40;
+  height: 63px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.header__logo {
+  width: 162px;
+}
+
+.loader {
+  display: none;
+}
+
+.main-container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+}
+.main-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-container h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.main-container ul, .main-container ol {
+  list-style: none;
+}
+.main-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.location {
+  position: relative;
+  z-index: 20;
+  gap: 17px;
+  height: 50px;
+  background-color: #eaeaea;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.location__input {
+  border: none;
+  background: none;
+  width: 109px;
+}
+.location__input::placeholder {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero {
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 39px 0 57px;
+  text-align: center;
+}
+.hero__title {
+  padding: 0 50px;
+}
+.hero__content {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 15px 20px 27px;
+}
+.usage-instruction {
+  padding: 50px 20px 68px 0;
+}
+.usage-instruction__title {
+  padding-left: 20px;
+}
+.usage-instruction__steps {
+  padding-left: 32px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.usage-instruction .step {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  height: 72px;
+  padding-left: 34px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.usage-instruction .step__number {
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.usage-instruction .step__icon {
+  color: #7e7e7e;
+}
+.usage-instruction .step .fa-store {
+  color: #9356DC;
+}
+.usage-instruction .step .fa-mobile-screen-button {
+  font-size: 19px;
+}
+.usage-instruction .step__heading {
+  font-weight: 500;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.header, .location, .hero, .usage-instruction .step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.header, .location, .hero, .usage-instruction .step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.header, .location, .hero, .usage-instruction .step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.header, .location, .hero, .usage-instruction .step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  border: none;
+  border-radius: 25px;
+  padding: 15px 23px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+  transition: filter 300ms ease-in-out;
+}
+.hero__button:hover {
+  filter: brightness(110%) drop-shadow(0 4px 15px rgba(0, 0, 0, 0.35));
+}
+
+/*# sourceMappingURL=style.css.map */
