@@ -59,77 +59,97 @@
         <section class="restaurant-list">
             <h2 class="restaurant-list__title">Restaurants</h2>
             <ul class="restaurant-list__items">
-                <a href="restaurants/palette-du-gout.html">
-                    <li class="restaurant-item">
+                <li class="restaurant-item">
+                    <a href="restaurants/palette-du-gout.html">
                         <figure>
                             <img src="./assets/images/jay-wennington.webp"
                                  alt="Une belle assiette proposée dans ce restaurant">
                             <figcaption class="restaurant-item__badge">Nouveau</figcaption>
                         </figure>
-                        <div class="restaurant-items__details">
+                        <div class="details">
                             <h3 class="details__name">La palette du goût</h3>
                             <span class="details__location">Ménilmontant</span>
                         </div>
-                    </li>
-                </a>
-                <a href="restaurants/note-enchantee.html">
-                    <li class="restaurant-item">
+                    </a>
+                    <input type="checkbox" id="favorite-checkbox-menilmontant" class="heart-checkbox">
+                    <label for="favorite-checkbox-menilmontant" class="heart-label">
+                        <i class="far fa-heart heart-label__empty"></i>
+                        <i class="fas fa-heart heart-label__filled"></i>
+                    </label>
+                </li>
+                <li class="restaurant-item">
+                    <a href="restaurants/note-enchantee.html">
                         <figure>
                             <img src="./assets/images/stil.webp"
                                  alt="Une belle assiette proposée dans ce restaurant">
                             <figcaption class="restaurant-item__badge">Nouveau</figcaption>
                         </figure>
-                        <div class="restaurant-items__details">
+                        <div class="details">
                             <h3 class="details__name">La note enchantée</h3>
                             <span class="details__location">Charonne</span>
                         </div>
-                    </li>
-                </a>
-                <a href="restaurants/a-la-francaise.html">
-                    <li class="restaurant-item">
+                    </a>
+                    <input type="checkbox" id="favorite-checkbox-charonne" class="heart-checkbox">
+                    <label for="favorite-checkbox-charonne" class="heart-label">
+                        <i class="far fa-heart heart-label__empty"></i>
+                        <i class="fas fa-heart heart-label__filled"></i>
+                    </label>
+                </li>
+                <li class="restaurant-item">
+                    <a href="restaurants/a-la-francaise.html">
                         <figure>
                             <img src="./assets/images/toa-heftiba.webp"
                                  alt="Une belle assiette proposée dans ce restaurant">
                             <figcaption class="restaurant-item__badge">Nouveau</figcaption>
                         </figure>
-                        <div class="restaurant-items__details">
+                        <div class="details">
                             <h3 class="details__name">À la française</h3>
                             <span class="details__location">Cité Rouge</span>
                         </div>
-                    </li>
-                </a>
-                <a href="restaurants/delice-des-sens.html">
-                    <li class="restaurant-item">
+                    </a>
+                    <input type="checkbox" id="favorite-checkbox-cite" class="heart-checkbox">
+                    <label for="favorite-checkbox-cite" class="heart-label">
+                        <i class="far fa-heart heart-label__empty"></i>
+                        <i class="fas fa-heart heart-label__filled"></i>
+                    </label>
+                </li>
+                <li class="restaurant-item">
+                    <a href="restaurants/delice-des-sens.html">
                         <figure>
                             <img src="./assets/images/louis-hansel.webp"
                                  alt="Une belle assiette proposée dans ce restaurant">
                             <figcaption class="restaurant-item__badge">Nouveau</figcaption>
                         </figure>
-                        <div class="restaurant-items__details">
+                        <div class="details">
                             <h3 class="details__name">Le délice des sens</h3>
                             <span class="details__location">Folie-Méricourt</span>
                         </div>
-                    </li>
-                </a>
+                    </a>
+                    <input type="checkbox" id="favorite-checkbox-folie" class="heart-checkbox">
+                    <label for="favorite-checkbox-folie" class="heart-label">
+                        <i class="far fa-heart heart-label__empty"></i>
+                        <i class="fas fa-heart heart-label__filled"></i>
+                    </label>
+                </li>
             </ul>
         </section>
     </main>
     <footer class="footer">
         <img src="./assets/logos/ohmyfood@2x.svg" alt="Le logo d'ohmyfood" class="footer__logo">
         <ul class="footer__links">
-            <li class="footer__links__link">
+            <li class="link">
                 <i class="fa-solid fa-utensils"></i>
-                <span class="footer__link-text">Proposer un restaurant</span>
+                <span class="link__text">Proposer un restaurant</span>
             </li>
-            <li class="footer__links__link">
+            <li class="link">
                 <i class="fa-solid fa-handshake-angle"></i>
-                <span class="footer__link-text">Devenir partenaire</span>
+                <span class="link__text">Devenir partenaire</span>
             </li>
-            <li class="footer__links__link">
-                <span class="footer__link-text">Mentions légales</span>
+            <li class="link">
+                <span class="link__text">Mentions légales</span>
             </li>
-            <li class="footer__links__link">
-                <span class="footer__link-text"><a href="mailto:contact@contact.fr">Contact</a></span>
+            <li class="link">
+                <span class="link__text"><a href="mailto:contact@contact.fr">Contact</a></span>
             </li>
         </ul>
     </footer>
