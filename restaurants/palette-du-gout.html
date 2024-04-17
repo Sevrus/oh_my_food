@@ -8,9 +8,76 @@
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+<div class="main-container">
+    <header class="header">
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <img src="../assets/logos/ohmyfood.png" alt="Le logo d'ohmyfood" class="header__logo">
+    </header>
+    <main>
+        <img src="../assets/images/jay-wennington.webp"
+             alt="Une belle assiette proposée dans ce restaurant"
+             class="banner-image"
+        >
+        <div class="restaurant">
+            <section class="restaurant__title">
+                <h1>La palette du goût</h1>
+                <input type="checkbox" id="favorite-checkbox-menilmontant" class="heart-checkbox">
+                <label for="favorite-checkbox-menilmontant" class="heart-label">
+                    <i class="far fa-heart heart-label__empty"></i>
+                    <i class="fas fa-heart heart-label__filled"></i>
+                </label>
+            </section>
+            <section class="restaurant__menu">
+                <h2>entrées</h2>
+                <article class="recipes">
+                    <h3 class="recipes__title">Fricassée d'escargots</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Foie gras de canard mi-cuit</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Œuf au plat</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+            </section>
+            <section class="restaurant__menu">
+                <h2>plats</h2>
+                <article class="recipes">
+                    <h3 class="recipes__title">Filet de bœuf aux herbes</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Parmentier de queue de bœuf</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Filet de turbot</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+            </section>
+            <section class="restaurant__menu">
+                <h2>desserts</h2>
+                <article class="recipes">
+                    <h3 class="recipes__title">Paris-Brest</h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Macaron au chocolat d'exception </h3>
+                    <p class="recipes__specification"></p>
+                </article>
+                <article class="recipes">
+                    <h3 class="recipes__title">Mousse au chocolat </h3>
+                    <p class="recipes__specification"></p>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
 
 </body>
 </html>

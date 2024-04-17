@@ -1,0 +1,74 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+@import '../utilities/extends';
+@import '../base/general';
+@import '../components/header';
+@import '../components/footer';
+
+//BANNER
+.banner-image {
+  width: 100%;
+}
+
+//SECTION MENU
+.restaurant {
+  position: relative;
+  width: 100%;
+  background-color: $primary-background;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 36px;
+  margin-top: -45px;
+  z-index: 2;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px;
+
+    h1 {
+      font-family: "Shrikhand", serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .heart-checkbox {
+      display: none;
+
+      &:checked + .heart-label .far.fa-heart {
+        display: none;
+      }
+
+      &:checked + .heart-label .fas.fa-heart {
+        display: inline-block;
+        color: transparent;
+        @include heart-fill($primary-color, $secondary-color);
+        animation: fill-heart ease 2.5s;
+      }
+    }
+
+    .heart-label {
+      cursor: pointer;
+
+      &__empty,
+      &__filled {
+        font-size: 24px;
+      }
+
+      &__filled {
+        display: none;
+      }
+
+      @keyframes fill-heart {
+        0% {
+          opacity: .3;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
