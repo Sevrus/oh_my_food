@@ -97,6 +97,7 @@
     }
 
     .recipes {
+      //todo ajouter animation lors de l'ouverture de l'appli
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -109,19 +110,16 @@
       &__toggle {
         display: none;
 
-        &:checked + .recipes__title {
-          width: calc(100% - 99px);
-        }
-
-        &:checked + .recipes__title + .buy-container {
-          transform: translateX(0);
+        &:checked + .buy-container {
+          margin-right: 0;
         }
       }
 
       &__title {
         padding: 13px 0 13px 15px;
-        width: calc(100% - 40px);
-        transition: width 0.5s ease;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         h3 {
           font-size: 18px;
@@ -146,8 +144,9 @@
         display: flex;
         align-items: flex-end;
         cursor: pointer;
-        transform: translateX(59px);
-        transition: transform 0.5s ease;
+        margin-left: 12px;
+        margin-right: -59px;
+        transition: margin-right 0.5s ease;
 
         &__prices {
           width: 40px;
