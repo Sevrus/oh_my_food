@@ -70,7 +70,7 @@
   }
 
   &__button {
-    @extend %button-gradient;
+    @include button-gradient(13px, 18px);
   }
 }
 
