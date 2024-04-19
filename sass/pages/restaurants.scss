@@ -97,20 +97,73 @@
     }
 
     .recipes {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
       background-color: #fff;
-      padding: 13px 0 13px 15px;
+      overflow: hidden;
       margin-bottom: 12px;
       border-radius: 15px;
       @include shadow(0, 4px, 15px, 0, rgba(0, 0, 0, .1));
 
-      h3 {
-        font-size: 18px;
-        font-weight: 500;
+      &__toggle {
+        display: none;
+
+        &:checked + .recipes__title {
+          width: calc(100% - 99px);
+        }
+
+        &:checked + .recipes__title + .buy-container {
+          transform: translateX(0);
+        }
       }
 
-      p {
-        font-size: 15px;
-        font-weight: 300;
+      &__title {
+        padding: 13px 0 13px 15px;
+        width: calc(100% - 40px);
+        transition: width 0.5s ease;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p {
+          font-size: 15px;
+          font-weight: 300;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .buy-container {
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        transform: translateX(59px);
+        transition: transform 0.5s ease;
+
+        &__prices {
+          width: 40px;
+          font-size: 15px;
+          font-weight: 700;
+          padding-bottom: 13px;
+        }
+
+        &__icon-content {
+          @extend %flex-center;
+          width: 59px;
+          height: 66px;
+          background-color: #99e2d0;
+          color: #fff;
+          font-size: 20px;
+        }
       }
     }
   }

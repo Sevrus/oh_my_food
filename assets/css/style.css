@@ -19,7 +19,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-.restaurant .order-container, .usage-instruction .step__number, .hero, .location, .header {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ body {
   color: inherit;
 }
 
-.restaurant .order-container, .usage-instruction .step__number, .hero, .location, .header {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,7 +452,7 @@ body {
   }
 }
 
-.restaurant .order-container, .header, .location, .hero, .usage-instruction .step__number {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .header, .location, .hero, .usage-instruction .step__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -484,7 +484,7 @@ body {
   color: inherit;
 }
 
-.restaurant .order-container, .header, .location, .hero, .usage-instruction .step__number {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .header, .location, .hero, .usage-instruction .step__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -684,19 +684,64 @@ body {
   margin-bottom: 10px;
 }
 .restaurant__menu .recipes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 13px 0 13px 15px;
+  overflow: hidden;
   margin-bottom: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
-.restaurant__menu .recipes h3 {
+.restaurant__menu .recipes__toggle {
+  display: none;
+}
+.restaurant__menu .recipes__toggle:checked + .recipes__title {
+  width: calc(100% - 99px);
+}
+.restaurant__menu .recipes__toggle:checked + .recipes__title + .buy-container {
+  transform: translateX(0);
+}
+.restaurant__menu .recipes__title {
+  padding: 13px 0 13px 15px;
+  width: calc(100% - 40px);
+  transition: width 0.5s ease;
+}
+.restaurant__menu .recipes__title h3 {
   font-size: 18px;
   font-weight: 500;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.restaurant__menu .recipes p {
+.restaurant__menu .recipes__title p {
   font-size: 15px;
   font-weight: 300;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.restaurant__menu .recipes .buy-container {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transform: translateX(59px);
+  transition: transform 0.5s ease;
+}
+.restaurant__menu .recipes .buy-container__prices {
+  width: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 13px;
+}
+.restaurant__menu .recipes .buy-container__icon-content {
+  width: 59px;
+  height: 66px;
+  background-color: #99e2d0;
+  color: #fff;
+  font-size: 20px;
 }
 .restaurant .order-container {
   width: 100%;
