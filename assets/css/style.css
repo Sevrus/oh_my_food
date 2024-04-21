@@ -670,6 +670,32 @@ body {
 .restaurant__menu {
   padding: 40px 13px 0;
 }
+.restaurant__menu article:nth-of-type(even) {
+  animation: appear-right ease-in-out 3s;
+}
+.restaurant__menu article:nth-of-type(odd) {
+  animation: appear-left ease-in-out 3s;
+}
+@keyframes appear-right {
+  0% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes appear-left {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .restaurant__menu h2 {
   font-weight: 300;
   text-transform: uppercase;
