@@ -19,7 +19,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header, .loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -51,7 +52,94 @@ body {
   color: inherit;
 }
 
-.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header, .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-list__title, .usage-instruction__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100;
+  animation: vanish 0.1s forwards;
+  animation-delay: 3s;
+}
+@keyframes vanish {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.loader__letters {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7e7e7e;
+  letter-spacing: 7px;
+  animation: change-color 1.2s infinite;
+}
+@keyframes change-color {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  40% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  80% {
+    color: #7e7e7e;
+    text-shadow: none;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+.loader .letter-1 {
+  animation-delay: 0.1s;
+}
+.loader .letter-2 {
+  animation-delay: 0.2s;
+}
+.loader .letter-3 {
+  animation-delay: 0.3s;
+}
+.loader .letter-4 {
+  animation-delay: 0.4s;
+}
+.loader .letter-5 {
+  animation-delay: 0.5s;
+}
+.loader .letter-6 {
+  animation-delay: 0.6s;
+}
+.loader .letter-7 {
+  animation-delay: 0.7s;
+}
+.loader .letter-8 {
+  animation-delay: 0.8s;
+}
+.loader .letter-9 {
+  animation-delay: 0.9s;
+}
+.loader .letter-10 {
+  animation-delay: 1s;
+}
+
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .usage-instruction .step__number, .hero, .location, .header, .loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +164,8 @@ body {
 .header .fa-arrow-left {
   position: absolute;
   left: 23px;
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header__logo {
   width: 162px;
@@ -452,7 +541,7 @@ body {
   }
 }
 
-.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .header, .location, .hero, .usage-instruction .step__number {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .loader, .header, .location, .hero, .usage-instruction .step__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,6 +558,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -484,7 +574,7 @@ body {
   color: inherit;
 }
 
-.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .header, .location, .hero, .usage-instruction .step__number {
+.restaurant .order-container, .restaurant__menu .recipes .buy-container__icon-content, .loader, .header, .location, .hero, .usage-instruction .step__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,7 +599,8 @@ body {
 .header .fa-arrow-left {
   position: absolute;
   left: 23px;
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header__logo {
   width: 162px;
@@ -606,21 +697,31 @@ body {
 }
 
 .banner {
+  overflow: hidden;
   width: 100%;
   height: 260px;
 }
 .banner__image {
   width: 100%;
+  max-height: 512px;
+  object-fit: cover;
+}
+@media (min-width: 767px) {
+  .banner__image {
+    margin-top: -150px;
+  }
 }
 
 .restaurant {
   position: relative;
   width: 100%;
+  max-width: 1055px;
   background-color: #f6f6f6;
+  overflow: hidden;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding-top: 36px;
-  margin-top: -45px;
+  margin: -45px auto 0;
   z-index: 2;
 }
 .restaurant__title {
@@ -628,6 +729,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 17px;
+}
+@media (min-width: 767px) {
+  .restaurant__title {
+    justify-content: center;
+    gap: 24px;
+  }
 }
 .restaurant__title h1 {
   font-family: "Shrikhand", serif;
@@ -668,6 +775,8 @@ body {
   }
 }
 .restaurant__menu {
+  max-width: 635px;
+  margin: 0 auto;
   padding: 40px 13px 0;
 }
 .restaurant__menu article:nth-of-type(even) {

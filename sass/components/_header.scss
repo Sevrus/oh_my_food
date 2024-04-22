@@ -16,7 +16,8 @@
   .fa-arrow-left {
     position: absolute;
     left: 23px;
-    top: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__logo {

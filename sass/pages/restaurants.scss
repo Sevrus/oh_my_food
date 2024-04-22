@@ -7,11 +7,19 @@
 
 //BANNER
 .banner {
+  overflow: hidden;
   width: 100%;
   height: 260px;
+  
 
   &__image {
     width: 100%;
+    max-height: 512px;
+    object-fit: cover;
+
+    @media (min-width: $media-tablet) {
+      margin-top: -150px;
+    }
   }
 }
 
@@ -19,11 +27,13 @@
 .restaurant {
   position: relative;
   width: 100%;
+  max-width: 1055px;
   background-color: $primary-background;
+  overflow: hidden;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding-top: 36px;
-  margin-top: -45px;
+  margin: -45px auto 0;
   z-index: 2;
 
   &__title {
@@ -31,6 +41,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 17px;
+
+    @media (min-width: $media-tablet) {
+      justify-content: center;
+      gap: 24px;
+    }
 
     h1 {
       font-family: "Shrikhand", serif;
@@ -79,6 +94,8 @@
   }
 
   &__menu {
+    max-width: 635px;
+    margin: 0 auto;
     padding: 40px 13px 0;
 
     article:nth-of-type(even) {
@@ -129,7 +146,6 @@
     }
 
     .recipes {
-      //todo ajouter animation lors de l'ouverture de l'appli
       width: 100%;
       display: flex;
       justify-content: space-between;
