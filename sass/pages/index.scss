@@ -1,6 +1,7 @@
 @import '../utilities/variables';
 @import '../utilities/mixins';
 @import '../utilities/extends';
+@import '../utilities/keyframes';
 @import '../base/general';
 @import '../components/loader';
 @import '../components/header';
@@ -280,16 +281,6 @@
 
       &__filled {
         display: none;
-      }
-
-      @keyframes fill-heart {
-        0% {
-          opacity: .3;
-        }
-
-        100% {
-          opacity: 1;
-        }
       }
     }
   }
