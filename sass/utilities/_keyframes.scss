@@ -1,0 +1,33 @@
+@keyframes appear-right {
+  0% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fill-heart {
+  0% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

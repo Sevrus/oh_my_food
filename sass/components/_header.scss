@@ -1,0 +1,30 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+@import '../utilities/extends';
+
+.header {
+  position: relative;
+  z-index: 40;
+  height: 63px;
+  @include shadow(0, 2px, 4px, 0, rgba(0, 0, 0, .15));
+  @extend %flex-center;
+
+  @media (min-width: $media-tablet) {
+    height: 96px;
+  }
+
+  .fa-arrow-left {
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__logo {
+    width: 162px;
+
+    @media (min-width: $media-tablet) {
+      width: 200px;
+    }
+  }
+}

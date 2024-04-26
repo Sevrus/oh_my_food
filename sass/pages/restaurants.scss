@@ -1,0 +1,194 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+@import '../utilities/extends';
+@import '../utilities/keyframes';
+@import '../base/general';
+@import '../components/header';
+@import '../components/footer';
+
+//BANNER
+.hero-banner {
+  max-width: 100%;
+  width: 100%;
+  max-height: 275px;
+  object-fit: cover;
+
+  @media (min-width: $media-tablet) {
+    max-height: 329px;
+  }
+
+  @media (min-width: $media-desktop) {
+    max-height: 383px;
+  }
+}
+
+//SECTION MENU
+.restaurant {
+  position: relative;
+  width: 100%;
+  max-width: 1055px;
+  background-color: $primary-background;
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 36px;
+  margin: -45px auto 0;
+  z-index: 2;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px;
+
+    @media (min-width: $media-tablet) {
+      justify-content: center;
+      gap: 24px;
+    }
+
+    h1 {
+      font-family: "Shrikhand", serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .heart-checkbox {
+      display: none;
+
+      &:checked + .heart-label .far.fa-heart {
+        display: none;
+      }
+
+      &:checked + .heart-label .fas.fa-heart {
+        display: inline-block;
+        color: transparent;
+        @include heart-fill($primary-color, $secondary-color);
+        animation: fill-heart ease 2.5s;
+      }
+    }
+
+    .heart-label {
+      cursor: pointer;
+
+      &__empty,
+      &__filled {
+        font-size: 24px;
+        margin-right: 24px;
+      }
+
+      &__filled {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    max-width: 635px;
+    margin: 0 auto;
+    padding: 40px 13px 0;
+
+    article:nth-of-type(even) {
+      animation: appear-right ease-in-out 3s;
+    }
+
+    article:nth-of-type(odd) {
+      animation: appear-left ease-in-out 3s;
+    }
+
+    h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    hr {
+      width: 40px;
+      margin-left: 0;
+      background-color: $tertiary-color;
+      height: 3px;
+      border: none;
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+
+    .recipes {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 12px;
+      border-radius: 15px;
+      @include shadow(0, 4px, 15px, 0, rgba(0, 0, 0, .1));
+
+      &__toggle {
+        display: none;
+
+        &:checked + .buy-container {
+          margin-right: 0;
+        }
+      }
+
+      &__title {
+        padding: 13px 0 13px 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p {
+          font-size: 15px;
+          font-weight: 300;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .buy-container {
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        margin-left: 12px;
+        margin-right: -59px;
+        transition: margin-right 0.5s ease;
+
+        &__prices {
+          width: 40px;
+          font-size: 15px;
+          font-weight: 700;
+          padding-bottom: 13px;
+        }
+
+        &__icon-content {
+          @extend %flex-center;
+          width: 59px;
+          height: 66px;
+          background-color: #99e2d0;
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .order-container {
+    @extend %flex-center;
+    width: 100%;
+    padding: 28px 0 40px;
+
+    &__button {
+      @include button-gradient(15px, 50px);
+    }
+  }
+
+}
+

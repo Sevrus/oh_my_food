@@ -1,0 +1,12 @@
+@import 'variables';
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%index-h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
