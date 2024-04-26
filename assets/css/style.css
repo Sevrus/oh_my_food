@@ -747,9 +747,19 @@ body {
 
 .hero-banner {
   max-width: 100%;
-  max-height: 32rem;
   width: 100%;
+  max-height: 275px;
   object-fit: cover;
+}
+@media (min-width: 767px) {
+  .hero-banner {
+    max-height: 329px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-banner {
+    max-height: 383px;
+  }
 }
 
 .restaurant {

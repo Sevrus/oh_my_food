@@ -9,9 +9,17 @@
 //BANNER
 .hero-banner {
   max-width: 100%;
-  max-height: 32rem;
   width: 100%;
+  max-height: 275px;
   object-fit: cover;
+
+  @media (min-width: $media-tablet) {
+    max-height: 329px;
+  }
+
+  @media (min-width: $media-desktop) {
+    max-height: 383px;
+  }
 }
 
 //SECTION MENU
