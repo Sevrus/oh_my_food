@@ -850,6 +850,12 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
+.restaurant__menu .recipes:hover {
+  cursor: pointer;
+}
+.restaurant__menu .recipes:hover > .buy-container {
+  margin-right: 0;
+}
 .restaurant__menu .recipes__toggle {
   display: none;
 }

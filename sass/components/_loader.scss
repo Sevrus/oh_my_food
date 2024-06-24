@@ -16,7 +16,6 @@
     from {
       opacity: 1;
     }
-
     to {
       opacity: 0;
       display: none;
@@ -36,17 +35,14 @@
         color: $primary-color;
         text-shadow: 0 0 7px $primary-color;
       }
-
       40% {
         color: $secondary-color;
         text-shadow: 0 0 7px $secondary-color;
       }
-
       80% {
         color: #7e7e7e;
         text-shadow: none;
       }
-
       100% {
         color: $primary-color;
         text-shadow: 0 0 7px $primary-color;

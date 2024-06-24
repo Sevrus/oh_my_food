@@ -120,6 +120,14 @@
       border-radius: 15px;
       @include shadow(0, 4px, 15px, 0, rgba(0, 0, 0, .1));
 
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover>.buy-container {
+        margin-right: 0;
+      }
+
       &__toggle {
         display: none;
 
